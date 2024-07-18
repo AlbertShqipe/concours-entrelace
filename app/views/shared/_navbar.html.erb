@@ -30,10 +30,7 @@
           </li>
         <% else %>
           <li class="nav-item">
-            <%= link_to "Login", new_user_session_path, class: "nav-link" %>
-          </li>
-          <li class="nav-item">
-            <%= link_to "REGULATION", 'regulation', class: "nav-link" %>
+            <%= link_to "REGULATION", '/regulation', class: "nav-link" %>
           </li>
           <li class="nav-item">
             <%= link_to "WHO ARE WE", "who_are_we", class: "nav-link" %>
@@ -46,6 +43,9 @@
           </li>
           <li class="nav-item">
             <%= link_to "MEDIA", 'media', class: "nav-link" %>
+          </li>
+          <li class="nav-item">
+            <%= link_to "Login", new_user_session_path, class: "nav-link" %>
           </li>
         <% end %>
       </ul>
