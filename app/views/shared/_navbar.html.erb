@@ -1,8 +1,9 @@
 <div class="navbar navbar-expand-sm navbar-light navbar-lewagon">
   <div class="container-fluid">
     <%= link_to "#", class: "navbar-brand" do %>
-      <%= image_tag "https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/logo.png" %>
+      <%# <%= image_tag "https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/logo.png" %>
     <% end %>
+      <h4>CONCOURS INTERNATIONAL ENTRELACÉ</h4>
 
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
@@ -30,6 +31,21 @@
         <% else %>
           <li class="nav-item">
             <%= link_to "Login", new_user_session_path, class: "nav-link" %>
+          </li>
+          <li class="nav-item">
+            <%= link_to "REGULATION", 'regulation', class: "nav-link" %>
+          </li>
+          <li class="nav-item">
+            <%= link_to "WHO ARE WE", "who_are_we", class: "nav-link" %>
+          </li>
+          <li class="nav-item">
+            <%= link_to "PRACTICAL INFO", 'practical_info', class: "nav-link" %>
+          </li>
+          <li class="nav-item">
+            <%= link_to "OUR PARTNERS", 'our_partners', class: "nav-link" %>
+          </li>
+          <li class="nav-item">
+            <%= link_to "MEDIA", 'media', class: "nav-link" %>
           </li>
         <% end %>
       </ul>
