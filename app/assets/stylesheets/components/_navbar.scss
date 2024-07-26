@@ -1,15 +1,56 @@
 .navbar-lewagon {
   justify-content: space-between;
+  // gap: 10px;
   color: $orange;
+  background-color: rgba(0, 0, 0, 0.5);
   a {
     color: $orange;
+    padding: 0px;
+    margin: 0px;
+
+    &:hover {
+      color: $light-gray;
+    }
+
   }
+  #login {
+    color: $light-gray;
+    margin-right: 50px;
+
+    &:hover {
+      color: $orange;
+    }
+  }
+
+  // @media (max-width: 576px) {
+  //   .navbar-nav {
+  //     a {
+  //       color: $orange;
+  //     }
+  // }
+
+}
+
+#title {
+  margin-right: 80px;
 }
 
 .navbar-lewagon .navbar-collapse {
   flex-grow: 0;
+
+    // @media (max-width: 576px) {
+    //   button {
+    //     color: $orange;
+    //   }
+    // }
+
 }
+
 
 .navbar-lewagon .navbar-brand img {
   width: 40px;
+}
+
+.navbar-lewagon .navbar-brand {
+  margin-left: 50px;
 }
