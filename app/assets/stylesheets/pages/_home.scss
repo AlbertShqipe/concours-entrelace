@@ -7,41 +7,6 @@
 //   overflow: hidden;
 
 // }
-
-.expandable-div {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  position: fixed;
-  top: 50%;
-  right: 0;
-  transform: translateY(-50%);
-  width: 20px;
-  height: 500px;
-  border-radius: 5px 0 0 5px;
-  background-color: rgba(222, 222, 212, 0.5);
-  transition: width 0.3s ease-in-out;
-  overflow: hidden; /* Ensure contents are hidden */
-  .container-expandable {
-    padding: 0 10px 0 10px;
-  }
-
-  &:hover {
-    width: 200px;
-  }
-}
-.expandable-div .content {
-  opacity: 0; /* Hide content initially */
-  transition: opacity 0.3s ease-in-out;
-  padding: 10px; /* Adjust padding as needed */
-  text-align: center;
-}
-.expandable-div:hover .content {
-  opacity: 1; /* Show content on hover */
-}
-
-
-
 .first-container-home {
   position: relative;
   width: 100vw;

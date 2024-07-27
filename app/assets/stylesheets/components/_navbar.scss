@@ -13,7 +13,25 @@
     }
 
   }
+
+  #media {
+    margin-right: 25px;
+  }
+
+  #signup {
+    margin-right: 25px !important;
+    color: $light-gray;
+    margin-right: 50px;
+    border: 1px solid $orange;
+    border-radius: 5px;
+
+    &:hover {
+      color: $orange;
+    }
+  }
+
   #login {
+    margin: 0 !important;
     color: $light-gray;
     margin-right: 50px;
 

@@ -126,10 +126,13 @@
                 <%= link_to "OUR PARTNERS", '#our_partners', class: "nav-link" %>
               </li>
               <li class="nav-item">
-                <%= link_to "MEDIA", '#media', class: "nav-link" %>
+                <%= link_to "MEDIA", '#media', class: "nav-link", id:"media" %>
               </li>
               <li class="nav-item">
                 <%= link_to "Login", new_user_session_path, class: "nav-link", id:'login' %>
+              </li>
+              <li class="nav-item">
+                <%= link_to "Sign Up", new_user_registration_path, class: "nav-link", id:'signup' %>
               </li>
             <% end %>
           </ul>
