@@ -9,5 +9,6 @@ Rails.application.routes.draw do
   get 'practical_info' => 'pages#practical_info'
   get 'contact' => 'pages#contact'
   get 'our_partners' => 'pages#our_partners'
+  get 'apply' => 'pages#apply'
 
 end

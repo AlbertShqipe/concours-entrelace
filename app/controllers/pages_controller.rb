@@ -21,4 +21,7 @@ class PagesController < ApplicationController
 
   def our_partners
   end
+
+  def apply
+  end
 end
