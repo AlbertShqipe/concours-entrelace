@@ -1,1 +1,55 @@
-<h1 style="text-align:center">Form to apply in the compteition</h1>
+<h1 class="text-center">Candidate Registration Form</h1>
+<div class="container">
+  <%= form_with(model: @form_solo, local: true, data: {
+    controller: "flatpickr"
+  }) do |f| %>
+    <%= f.label :first_name %>
+    <%= f.text_field :first_name, class: "input-session" %>
+
+    <%= f.label :last_name %>
+    <%= f.text_field :last_name, class: "input-session" %>
+
+    <%= f.label :birth_date, "Birthday", class: "label birthdate" %><br>
+    <%= f.date_field :birth_date, id:"myID", placeholder: "Birthday" %> <br>
+
+    <%= f.label :address, class: "address" %>
+    <%= f.text_field :address, class: "input-session" %>
+
+    <%= f.label :phone %>
+    <%= f.text_field :phone, class: "input-session" %>
+
+    <%= f.label :email %>
+    <%= f.email_field :email, class: "input-session" %>
+
+    <%= f.label :teacher_name %>
+    <%= f.text_field :teacher_name, class: "input-session" %>
+
+    <%= f.label :dance_school %>
+    <%= f.text_field :dance_school, class: "input-session" %>
+
+    <%= f.label :teacher_phone %> <!-- Corrected the label here -->
+    <%= f.text_field :teacher_phone, class: "input-session" %>
+
+    <%= f.label :teacher_email %>
+    <%= f.email_field :teacher_email, class: "input-session" %>
+
+    <div class="d-flex justify-content-around">
+      <div>
+        <%= f.label :category, class: "label" %> <br>
+        <%= f.select :category, options_for_select(['Loisir', 'Pré-professionnelle']), prompt: "Select a category", class: "input-session" %> <br>
+      </div>
+
+      <div>
+        <%= f.label :style, class: "label" %> <br>
+        <%= f.select :style, options_for_select(['Classique', 'Modern’Jazz', 'Contemporain']), prompt: "Select a style", class: "input-session" %><br>
+      </div>
+
+      <div>
+        <%= f.label :level, class: "label" %> <br>
+        <%= f.select :level, options_for_select(['Préparatoire', 'Elémentaire 1', 'Elémentaire 2', 'Elémentaire 2B', 'Moyen', 'Moyen 1', 'Moyen 1B', 'Moyen 2', 'Avancée', 'Supérieur', 'Formation']), prompt: "Select a level", class: "input-session" %> <br>
+      </div>
+    </div>
+
+    <%= f.submit 'Create Candidate', class: "input-btn" %>
+  <% end %>
+</div>

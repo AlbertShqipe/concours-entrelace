@@ -10,9 +10,29 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.1].define(version: 2024_07_29_135208) do
+ActiveRecord::Schema[7.1].define(version: 2024_08_01_113340) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "form_solos", force: :cascade do |t|
+    t.string "first_name"
+    t.string "last_name"
+    t.date "birth_date"
+    t.string "address"
+    t.string "phone"
+    t.string "email"
+    t.string "teacher_name"
+    t.string "dance_school"
+    t.string "teacher_phone"
+    t.string "teacher_email"
+    t.string "category"
+    t.string "style"
+    t.string "level"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.bigint "user_id", null: false
+    t.index ["user_id"], name: "index_form_solos_on_user_id"
+  end
 
   create_table "users", force: :cascade do |t|
     t.string "email", default: "", null: false
@@ -23,8 +43,11 @@ ActiveRecord::Schema[7.1].define(version: 2024_07_29_135208) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.integer "role", default: 1
+    t.string "name"
+    t.string "last_name"
     t.index ["email"], name: "index_users_on_email", unique: true
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
 
+  add_foreign_key "form_solos", "users"
 end

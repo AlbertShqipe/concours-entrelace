@@ -1,6 +1,7 @@
 Rails.application.routes.draw do
 
-  devise_for :users
+  devise_for :users, controllers: { registrations: 'registrations' }
+
   root to: "pages#home"
 
   get 'regulation' => 'pages#regulation'
@@ -10,5 +11,9 @@ Rails.application.routes.draw do
   get 'contact' => 'pages#contact'
   get 'our_partners' => 'pages#our_partners'
   get 'apply' => 'pages#apply'
+
+  resources :form_solo, only: [:new, :create, :index]
+  post '/apply', to: 'form_solos#create'
+  get 'form_solos' => 'form_solos#index'
 
 end

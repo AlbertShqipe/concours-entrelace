@@ -1,0 +1,111 @@
+.input-session {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 2px;
+  box-sizing: border-box;
+  margin-top: 8px;
+  margin-bottom: 16px;
+  resize: vertical;
+  font-size: 16px;
+  transition: 0.3s;
+  display: block;
+  color: black !important;
+  &:focus {
+    border: 1px solid $orange;
+  }
+  &:hover {
+    border: 1px solid $light-gray;
+  }
+}
+
+.custom-hint {
+  color: white;
+  font-size: 12px;
+  margin-top: 4px;
+}
+
+.input-btn {
+  width: 150px !important;
+  background-color: $orange;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  width: 100%;
+  margin-bottom: 12px;
+  &:hover {
+    background-color: $light-gray;
+  }
+}
+
+.label {
+  margin: 0px 0px 8px 0px;
+}
+
+.address {
+  margin-top: 16px;
+}
+
+.birthday-select {
+  padding: 5px;
+  margin: 5px;
+  border-radius: 5px;
+}
+
+#_birth_datetime_3i {
+  color: $orange;
+  background-color: black;
+}
+
+#_birth_datetime_2i {
+  color: $orange;
+  background-color: black;
+
+}
+
+#_birth_datetime_1i {
+  color: $orange;
+  background-color: black;
+
+}
+
+#category {
+  color: $orange;
+  background-color: black;
+  margin-bottom: 16px;
+}
+
+#style {
+  color: $orange;
+  background-color: black;
+  margin-bottom: 16px;
+}
+
+#level {
+  color: $orange;
+  background-color: black;
+  margin-bottom: 16px;
+}
+
+// #level {
+//   margin-bottom: 16px;
+//   width: 100%;
+//   padding: 12px;
+//   border: 1px solid #ccc;
+//   border-radius: 2px;
+//   box-sizing: border-box;
+//   margin-bottom: 16px;
+//   resize: vertical;
+//   font-size: 16px;
+//   transition: 0.3s;
+//   display: block;
+//   color: black !important;
+//   &:focus {
+//     border: 1px solid $orange;
+//   }
+//   &:hover {
+//     border: 1px solid $light-gray;
+//   }
+// }
