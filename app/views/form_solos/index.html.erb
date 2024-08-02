@@ -42,7 +42,7 @@
   </table>
 </div>
 -->
-<h1><%= current_user.role %> with id <%= current_user.id %></h1>
+<h1><%= current_user.name %>, <%= current_user.role %> with id <%= current_user.id %></h1>
 <% if current_user.role == "competitor" %>
   <table class="table-form mx-auto">
   <thead>
