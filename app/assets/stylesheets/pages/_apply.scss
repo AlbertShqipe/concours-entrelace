@@ -1,0 +1,24 @@
+.registration-form {
+  background-color: $light-gray;
+  padding: 20px 20px;
+  .registration-form-inner {
+    border: 2px solid $orange;
+    background-color: $light-gray;
+    padding: 20px 20px;
+
+    h1, h2, h3 {
+      color: $orange;
+      text-align: center;
+      text-decoration: underline;
+      font-family: Georgia, serif !important;
+    }
+    .birthday {
+      margin-top: 33px !important;
+      width: 223px;
+    }
+  }
+  .input-btn{
+    margin-top: 20px;
+    margin-left: 48px;
+  }
+}
