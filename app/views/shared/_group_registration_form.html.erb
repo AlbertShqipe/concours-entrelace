@@ -1,0 +1,26 @@
+<div class=" container registration-form">
+  <div class="registration-form-inner">
+    <h1 class="text-center">REGISTRATION FORM</h1>
+    <h2 class="text-center">Group Candidation</h2>
+    <h3 class="text-center">Fill out one form per group</h3>
+    <div class="container">
+      <%= form_with(model: @group, local: true) do |f| %>
+        <div class="field">
+          <%# <%= f.label :name %>
+          <%= f.text_field :name, placeholder: "Name of Group / Name of Choreography",  class: "input-form" %>
+        </div>
+
+        <h3 style="text-align:left">Participants</h3>
+        <%= f.fields_for :participants do |p| %>
+          <div>
+            <%# <%= p.label :name, "First Name" %>
+            <%= p.text_field :name, placeholder: "Name of Participant",  class: "input-form" %>
+          </div>
+        <% end %>
+        <div>
+          <%= f.submit %>
+        </div>
+      <% end %>
+    </div>
+  </div>
+</div>

@@ -1,1 +1,30 @@
-<%= render "shared/individual_registration_form" %>
+<div class="container">
+  <div class="row mt-3 d-flex justify-content-around">
+      <div class="col-md-4 mb-3">
+        <div class="card" style="background-color:#deded4; width:350px">
+          <%= image_tag "https://tse3.mm.bing.net/th?id=OIP.ZycaMBQWoVbiLpurWZNIdAAAAA&pid=Api", style:"height:500px !important"%>
+          <div class="card-body">
+            <h5 class="card-title">Group Registration Form</h5>
+            <div class="d-flex justify-content-around flex-column">
+              <p class="card-text" >Min 2 partecipants</p>
+              <p class="card-text">Please make sure to fill up all the boxes</p><br>
+              <a href="/groups/new" class="btn" style="background-color:#EB4301 !important">View</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4 mb-3">
+        <div class="card" style="background-color:#deded4; width:350px">
+          <%= image_tag "https://tse4.mm.bing.net/th?id=OIP.Wu1mNIZCTS8RsYAMIcgtJQHaLG&pid=Api", style:"height:500px !important" %>
+          <div class="card-body">
+            <h5 class="card-title">Individual Registration Form</h5>
+            <div class="d-flex justify-content-around flex-column">
+              <p class="card-text" >Solo</p>
+              <p class="card-text">Please make sure to fill up all the boxes</p><br>
+              <a href="/form_solos/new" class="btn" style="background-color:#EB4301 !important">View</a>
+            </div>
+          </div>
+        </div>
+      </div>
+  </div>
+</div>

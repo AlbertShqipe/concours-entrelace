@@ -1,8 +1,12 @@
 Rails.application.routes.draw do
 
-  devise_for :users, controllers: { registrations: 'registrations' }
-
   root to: "pages#home"
+  devise_for :users, controllers: { registrations: 'registrations' }
+  resources :groups
+  resources :form_solos
+
+
+
 
   get 'regulation' => 'pages#regulation'
   get 'media' => 'pages#media'
@@ -12,8 +16,7 @@ Rails.application.routes.draw do
   get 'our_partners' => 'pages#our_partners'
   get 'apply' => 'pages#apply'
 
-  resources :form_solo, only: [:new, :create, :index]
-  post '/apply', to: 'form_solos#create'
-  get 'form_solos' => 'form_solos#index'
+  # post '/apply', to: 'form_solos#create'
+  # get 'form_solos' => 'form_solos#index'
 
 end
