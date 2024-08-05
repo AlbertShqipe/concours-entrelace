@@ -4,23 +4,143 @@
     <h2 class="text-center">Group Candidation</h2>
     <h3 class="text-center">Fill out one form per group</h3>
     <div class="container">
-      <%= form_with(model: @group, local: true) do |f| %>
-        <div class="field">
-          <%# <%= f.label :name %>
-          <%= f.text_field :name, placeholder: "Name of Group / Name of Choreography",  class: "input-form" %>
-        </div>
-
-        <h3 style="text-align:left">Participants</h3>
-        <%= f.fields_for :participants do |p| %>
-          <div>
-            <%# <%= p.label :name, "First Name" %>
-            <%= p.text_field :name, placeholder: "Name of Participant",  class: "input-form" %>
+      <%= form_with(
+                      model: @group,
+                      local: true,
+                      data: { controller: "flatpickr" }
+                    ) do |f| %>
+        <div class="d-flex justify-content-around mt-5">
+          <div class="field">
+            <%# <%= f.label :name %>
+            <%= f.text_field :name, placeholder: "Name of Group", class: "input-form" %>
           </div>
-        <% end %>
-        <div>
-          <%= f.submit %>
+          <div>
+            <%# <%= form.label :responsable %>
+            <%= f.text_field :responsable, placeholder: "Responsable of Group", class: "input-form" %>
+          </div>
+          <div>
+            <%# <%= f.label :address %>
+            <%= f.text_field :address, placeholder: "Address", class: "input-form" %>
+          </div>
+          <div>
+            <%# <%= f.label :phone %>
+            <%= f.text_field :phone, placeholder: "Phone", class: "input-form" %>
+          </div>
+
+          <div>
+            <%# <%= f.label :email %>
+            <%= f.text_field :email, placeholder: "Email", class: "input-form" %>
+          </div>
         </div>
-      <% end %>
+        <div class="d-flex justify-content-around mt-4">
+          <div>
+            <div>
+              <%# <%= f.label :discipline %>
+              <%= f.select :discipline, options_for_select(['Classique', 'Modern’Jazz', 'Contemporain']), prompt: "Select Style", placeholder: "Discipline", class: "input-session" %>
+            </div>
+
+            <div>
+              <%# <%= f.label :level %>
+              <%= f.select :level ,options_for_select(['Préparatoire', 'Elémentaire', 'Moyen', 'Supérieur', 'Formation']), prompt: "Select Level", placeholder: "Level", class: "input-session", id:"category"%>
+            </div>
+          </div>
+          <div>
+            <%# <%= f.label :title_of_piece %>
+            <%= f.text_field :title_of_music, placeholder: "Title of the piece", class: "input-form" %>
+          </div>
+
+          <div>
+            <%# <%= f.label :compositor %>
+            <%= f.text_field :compositor, placeholder: "Compositor", class: "input-form" %>
+          </div>
+
+          <div>
+            <%# <%= f.label :length_of_piece, "Length of Piece in minutes", class: "label" %>
+            <%= f.number_field :length_of_piece, placeholder: "Length of Piece", class: "input-form", step: 1, min: 0 %>
+          </div>
+        </div>
+        <h5 style="text-align:left">Participants</h5>
+  <div id="participants">
+    <%= f.fields_for :participants do |p| %>
+      <div class="d-flex justify-content-between participant-fields">
+        <div>
+          <%= p.text_field :name, placeholder: "Name of Participant", class: "input-form" %>
+        </div>
+        <div>
+          <%= p.text_field :last_name, placeholder: "Last Name of Participant", class: "input-form" %>
+        </div>
+        <div>
+          <%= p.date_field :birth_date, placeholder: "Birthday", id:"myID", class: "input-form" %>
+        </div>
+        <div>
+          <%= p.number_field :age, placeholder: "Age today", class: "input-form" %>
+        </div>
+        <div style="padding-top:13px">
+          <button type="button" class="remove-participant btn btn-danger">Remove</button>
+        </div>
+      </div>
+    <% end %>
+  </div>
+
+  <!-- Hidden template for participant fields -->
+  <template id="participant-template">
+    <%= f.fields_for :participants do |p| %>
+      <div class="d-flex justify-content-between participant-fields">
+        <div>
+          <%= p.text_field :name, placeholder: "Name of Participant", class: "input-form" %>
+        </div>
+        <div>
+          <%= p.text_field :last_name, placeholder: "Last Name of Participant", class: "input-form" %>
+        </div>
+        <div>
+          <%= p.date_field :birth_date, placeholder: "Birthday", id:"myID", class: "input-form" %>
+        </div>
+        <div>
+          <%= p.number_field :age, placeholder: "Age today", class: "input-form" %>
+        </div>
+        <div style="padding-top:13px">
+          <button type="button" class="remove-participant btn btn-danger">Remove</button>
+        </div>
+      </div>
+    <% end %>
+  </template>
+
+  <button type="button" id="add-participant" class="btn btn-secondary">Add Participant</button>
+
+  <div>
+    <%= f.submit "Create Group", class: "input-btn" %>
+  </div>
+<% end %>
     </div>
   </div>
 </div>
+<script>
+  document.addEventListener("DOMContentLoaded", () => {
+  const addParticipantButton = document.getElementById('add-participant');
+  const participantsContainer = document.getElementById('participants');
+  const participantTemplate = document.getElementById('participant-template').innerHTML;
+
+  let participantIndex = document.querySelectorAll('.participant-fields').length;
+
+  if (addParticipantButton) {
+    addParticipantButton.addEventListener('click', (event) => {
+      event.preventDefault();
+
+      const newParticipant = participantTemplate.replace(/new_index/g, participantIndex);
+      participantsContainer.insertAdjacentHTML('beforeend', newParticipant);
+      participantIndex++;
+    });
+  }
+
+  // Add event listener for the remove buttons
+  participantsContainer.addEventListener('click', (event) => {
+    if (event.target.classList.contains('remove-participant')) {
+      event.preventDefault();
+      const participantField = event.target.closest('.participant-fields');
+      if (participantField) {
+        participantField.remove();
+      }
+    }
+  });
+});
+</script>

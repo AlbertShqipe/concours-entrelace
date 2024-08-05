@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.1].define(version: 2024_08_04_200225) do
+ActiveRecord::Schema[7.1].define(version: 2024_08_05_001338) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
@@ -38,6 +38,15 @@ ActiveRecord::Schema[7.1].define(version: 2024_08_04_200225) do
     t.string "name"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string "responsable"
+    t.string "address"
+    t.string "phone"
+    t.string "email"
+    t.string "discipline"
+    t.string "level"
+    t.string "title_of_music"
+    t.string "compositor"
+    t.string "length_of_piece"
   end
 
   create_table "participants", force: :cascade do |t|
@@ -45,6 +54,9 @@ ActiveRecord::Schema[7.1].define(version: 2024_08_04_200225) do
     t.bigint "group_id", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string "last_name"
+    t.date "birth_date"
+    t.integer "age"
     t.index ["group_id"], name: "index_participants_on_group_id"
   end
 

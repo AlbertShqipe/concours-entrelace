@@ -17,6 +17,6 @@ class GroupsController < ApplicationController
   private
 
   def group_params
-    params.require(:group).permit(:name, participants_attributes: [:name])
+    params.require(:group).permit(:name, :responsable, :address, :phone, :email, :discipline, :level, :title_of_music, :compositor, :length_of_piece, participants_attributes: [:name, :last_name, :birth_date, :age])
   end
 end
