@@ -4,13 +4,14 @@
   top: 80%;
   left: 50%;
   transform: translate(-50%, -50%);
-  background-color: $light-gray;
-  color: $orange;
+  background-color: white;
+  color: $black;
   padding: 10px 20px;
   border-radius: 5px;
   font-size: 1.5rem;
   text-align: center;
   cursor: pointer;
+
   z-index: 10;
 
   &:hover {

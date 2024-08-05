@@ -1,17 +1,18 @@
 .info {
   display: flex;
   justify-content: center;
-  align-items: center;
+  // align-items: center;
   width: 100%;
-  height: 600px;
+  height: 100vh;
   font-family: 'Montserrat', sans-serif;
   color: $light-gray;
   background-color: rgba($color: #000000, $alpha: 0.5);
 }
+
 .first-container-home {
   position: relative;
   width: 100vw;
-  height: 600px;
+  height: 100vh;
   overflow: hidden;
   background-color: transparent;
   display: block;
@@ -29,6 +30,87 @@
   background-color: transparent;
   display: block;
   color: $orange;
+  background-color: $light-gray;
+  h1 {
+    font-family: Georgia, serif !important;
+    text-align: center;
+    padding-top: 50px;
+    color: #000000;
+  }
+  h5 {
+    text-indent: 30px;
+    text-decoration: underline;
+    color: #000000;
+  }
+  p {
+    padding-top: 50px;
+    color: #000000;
+    font-size: 18px;
+  }
+}
+
+.section-regulation {
+  position: relative;
+  width: 100vw;
+  height: 100%;
+  overflow: hidden;
+  background-color: transparent;
+  display: block;
+  color: $orange;
+  background-color: $light-gray;
+  h1 {
+    font-family: Georgia, serif !important;
+    text-align: center;
+    padding-top: 50px;
+    color: #000000;
+  }
+  h5 {
+    text-indent: 30px;
+    text-decoration: underline;
+    color: #000000;
+    padding-top: 50px;
+  }
+  h6 {
+    text-align: center !important;
+    color: #000000;
+  }
+  .table-regulation {
+    width: 50%;
+    border-collapse: collapse;
+    margin: auto;
+    th, td {
+      border: 1px solid black;
+      padding: 8px;
+      text-align: left;
+      color:black;
+    }
+    th {
+      background-color: transparent;
+      color: black;
+      text-align: center;
+    }
+  }
+  .table-regulation-ordre {
+    width: 100%;
+    border-collapse: collapse;
+    margin: auto;
+    th, td {
+      border: 1px solid black;
+      padding: 8px;
+      text-align: left;
+      color:black;
+    }
+    th {
+      background-color: transparent;
+      color: black;
+      text-align: center;
+    }
+  }
+    p {
+    padding-top: 26px;
+    color: #000000;
+    font-size: 18px;
+  }
 }
 
 .full-div {
