@@ -19,6 +19,28 @@
     color: $light-gray;
   }
 }
+.button-light-gray {
+  text-decoration: none;
+  position: absolute;
+  top: 80%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: $light-gray;
+  color: black;
+  border: 1.5px solid white;
+  padding: 10px 20px;
+  border-radius: 5px;
+  font-size: 1.5rem;
+  text-align: center;
+  cursor: pointer;
+
+  z-index: 10;
+
+  &:hover {
+    background-color: $orange;
+    color: $light-gray;
+  }
+}
 
 .button-home {
   width: 280px;
@@ -28,6 +50,29 @@
   background-color: white;
   color: $black;
   border: 1.5px solid $black;
+  padding: 10px 20px;
+  border-radius: 5px;
+  font-size: 1.5rem;
+  cursor: pointer;
+  margin-top: 50px;
+  text-align: center;
+  z-index: 10;
+  margin-top:50px;
+
+  &:hover {
+    background-color: $orange;
+    color: $light-gray;
+  }
+}
+
+.button-home-gray {
+  width: 280px;
+  margin: auto;
+  text-decoration: none;
+  display:  inline-block;
+  background-color: $dark-gray;
+  color: white;
+  border: 1.5px solid white;
   padding: 10px 20px;
   border-radius: 5px;
   font-size: 1.5rem;

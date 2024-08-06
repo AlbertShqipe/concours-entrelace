@@ -31,6 +31,10 @@
     color: $light-gray;
     background-color: rgba($color: #000000, $alpha: 0.5);
     .text {
+      svg {
+        margin-top: 130px;
+        margin-right: 20px;
+      }
       text-align: center;
       font-family: Georgia, serif !important;
     }
@@ -92,36 +96,40 @@
   overflow: hidden;
   background-color: transparent;
   display: block;
-  color: $orange;
-  background-color: $light-gray;
+  color: $light-gray !important;
+  background-color: $black;
+  border-left: 1px solid $light-gray;
+  border-right: 1px solid $light-gray;
 
   .second-section-home-whoAreWe-image {
     width: 60%;
     margin: auto;
     text-align: center;
+
   }
 
   .second-section-home-whoAreWe-content {
     width: 1000px;
     margin: auto;
+
   }
 
   h1 {
     font-family: Georgia, serif !important;
     text-align: center;
     padding-top: 50px;
-    color: #000000;
+    color: $light-gray !important;
   }
 
   h5 {
     text-indent: 30px;
     text-decoration: underline;
-    color: #000000;
+    color: $light-gray !important;
   }
 
   p {
     padding-top: 50px;
-    color: #000000;
+    color: $light-gray !important;
     font-size: 18px;
   }
 
@@ -186,8 +194,11 @@
   overflow: hidden;
   background-color: transparent;
   display: block;
-  color: $orange;
-  background-color: $light-gray;
+  color: $light-gray !important;
+  background-color: $black;
+  border-left: 1px solid $light-gray;
+  border-right: 1px solid $light-gray;
+
 
   .second-section-home-ourPartners-image {
     width: 60%;
@@ -204,24 +215,24 @@
     font-family: Georgia, serif !important;
     text-align: center;
     padding-top: 50px;
-    color: #000000;
+    color: $light-gray !important;
   }
 
   h5 {
     text-indent: 30px;
     text-decoration: underline;
-    color: #000000;
+    color: $light-gray !important;
   }
 
   p {
     padding-top: 50px;
-    color: #000000;
+    color: $light-gray !important;
     font-size: 18px;
   }
 
   ul {
     padding-top: 50px;
-    color: #000000;
+    color: $light-gray !important;
     font-size: 18px;
   }
 }
