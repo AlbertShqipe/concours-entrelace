@@ -87,7 +87,7 @@
 
 
     <% end %>
-      <svg width="437" height="90" viewBox="0 0 837 139" fill="none" xmlns="http://www.w3.org/2000/svg" id="title">
+      <%# <svg width="437" height="90" viewBox="0 0 837 139" fill="none" xmlns="http://www.w3.org/2000/svg" id="title">
         <g filter="url(#filter0_d_71_911)">
         <path d="M23.5018 120.924C21.6201 127.444 19.3962 131.001 16.8302 131.001C12.8956 131.001 9.81634 125.666 7.42138 115.589C5.02641 105.512 4 89.5073 4 67.5752C4 49.1997 5.19749 33.7879 7.59246 21.9327C9.98742 10.0775 13.4088 3.55713 17.5144 3.55713C18.5408 3.55713 19.3962 4.14988 20.4226 5.3354C21.449 6.52093 22.3044 7.11368 22.9887 7.11368C23.5019 7.11368 24.015 7.11369 24.3572 6.52093C24.6993 5.92817 25.0415 5.33541 25.3836 3.55713L27.2654 35.5662L26.0679 36.7517C25.2125 27.2675 24.1861 20.7472 22.6465 15.4123C21.2779 10.6703 19.3962 8.29921 17.1723 8.29921C14.2641 8.29921 11.8691 13.634 10.3295 24.8965C8.7899 36.1589 7.93456 49.7924 7.93456 66.3897C7.93456 84.1725 8.61886 98.3987 9.98741 108.476C11.356 118.553 13.7509 123.887 17.0012 123.887C19.2251 123.887 21.1069 120.924 22.8176 115.589C24.3572 110.254 25.5547 102.548 26.0679 93.6567L27.2654 96.0277C26.5811 106.105 25.3836 114.403 23.5018 120.924Z" fill="#EB4301"/>
         <path d="M23.5018 120.924C21.6201 127.444 19.3962 131.001 16.8302 131.001C12.8956 131.001 9.81634 125.666 7.42138 115.589C5.02641 105.512 4 89.5073 4 67.5752C4 49.1997 5.19749 33.7879 7.59246 21.9327C9.98742 10.0775 13.4088 3.55713 17.5144 3.55713C18.5408 3.55713 19.3962 4.14988 20.4226 5.3354C21.449 6.52093 22.3044 7.11368 22.9887 7.11368C23.5019 7.11368 24.015 7.11369 24.3572 6.52093C24.6993 5.92817 25.0415 5.33541 25.3836 3.55713L27.2654 35.5662L26.0679 36.7517C25.2125 27.2675 24.1861 20.7472 22.6465 15.4123C21.2779 10.6703 19.3962 8.29921 17.1723 8.29921C14.2641 8.29921 11.8691 13.634 10.3295 24.8965C8.7899 36.1589 7.93456 49.7924 7.93456 66.3897C7.93456 84.1725 8.61886 98.3987 9.98741 108.476C11.356 118.553 13.7509 123.887 17.0012 123.887C19.2251 123.887 21.1069 120.924 22.8176 115.589C24.3572 110.254 25.5547 102.548 26.0679 93.6567L27.2654 96.0277C26.5811 106.105 25.3836 114.403 23.5018 120.924Z" fill="#EB4301"/>
@@ -158,7 +158,7 @@
         <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_71_911" result="shape"/>
         </filter>
         </defs>
-      </svg>
+      </svg> %>
 
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
@@ -171,13 +171,24 @@
             <%= link_to "My Forms", "/form_solos", class: "nav-link" %>
           </li>
           <li class="nav-item">
-            <%= link_to "Messages", "#", class: "nav-link" %>
+            <%= link_to "REGULATION", '/regulation', class: "nav-link" %>
           </li>
-
+          <li class="nav-item">
+            <%= link_to "WHO ARE WE", "who_are_we", class: "nav-link" %>
+          </li>
+          <li class="nav-item">
+            <%= link_to "PRACTICAL INFO", 'practical_info', class: "nav-link" %>
+          </li>
+          <li class="nav-item">
+            <%= link_to "OUR PARTNERS", 'our_partners', class: "nav-link" %>
+          </li>
+          <li class="nav-item">
+            <%= link_to "MEDIA", 'media', class: "nav-link" %>
+          </li>
           <li class="nav-item dropdown">
-          <a href="#" class="avatar" id="navbarDropdown" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-            <%= image_tag "https://kitt.lewagon.com/placeholder/users/ssaunier", class: "avatar", alt: "dropdown menu" %>
-          </a>
+            <a href="#" class="avatar" id="navbarDropdown" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              <%= image_tag "https://kitt.lewagon.com/placeholder/users/ssaunier", class: "avatar", alt: "dropdown menu" %>
+            </a>
             <div class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
               <%= link_to "Action", "#", class: "dropdown-item" %>
               <%= link_to "Another action", "#", class: "dropdown-item" %>

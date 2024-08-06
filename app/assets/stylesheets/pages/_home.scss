@@ -1,14 +1,4 @@
-.info {
-  display: flex;
-  justify-content: center;
-  // align-items: center;
-  width: 100%;
-  height: 100vh;
-  font-family: 'Montserrat', sans-serif;
-  color: $light-gray;
-  background-color: rgba($color: #000000, $alpha: 0.5);
-}
-
+// Home sections Style
 .first-container-home {
   position: relative;
   width: 100vw;
@@ -20,9 +10,35 @@
   background-size: cover;
   background-position: 60px -90px;
   background-repeat: no-repeat;
+
+  .full-div {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: transparent; /* Color for the full screen */
+    z-index: 5;
+  }
+
+  .info {
+    display: flex;
+    justify-content: center;
+    // align-items: center;
+    width: 100%;
+    height: 100vh;
+    font-family: 'Montserrat', sans-serif;
+    color: $light-gray;
+    background-color: rgba($color: #000000, $alpha: 0.5);
+    .text {
+      text-align: center;
+      font-family: Georgia, serif !important;
+    }
+  }
+
 }
 
-.second-section-home {
+.second-section-home-regulation {
   position: relative;
   width: 100vw;
   height: 100vh;
@@ -31,24 +47,232 @@
   display: block;
   color: $orange;
   background-color: $light-gray;
+
+  .second-section-home-regulation-image {
+    width: 60%;
+    margin: auto;
+    text-align: center;
+  }
+
+  .second-section-home-regulation-content {
+    width: 1000px;
+    margin: auto;
+  }
+
   h1 {
     font-family: Georgia, serif !important;
     text-align: center;
     padding-top: 50px;
     color: #000000;
   }
+
   h5 {
     text-indent: 30px;
     text-decoration: underline;
     color: #000000;
   }
+
   p {
+    padding-top: 50px;
+    color: #000000;
+    font-size: 18px;
+  }
+
+  ul {
     padding-top: 50px;
     color: #000000;
     font-size: 18px;
   }
 }
 
+.second-section-home-whoAreWe {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  background-color: transparent;
+  display: block;
+  color: $orange;
+  background-color: $light-gray;
+
+  .second-section-home-whoAreWe-image {
+    width: 60%;
+    margin: auto;
+    text-align: center;
+  }
+
+  .second-section-home-whoAreWe-content {
+    width: 1000px;
+    margin: auto;
+  }
+
+  h1 {
+    font-family: Georgia, serif !important;
+    text-align: center;
+    padding-top: 50px;
+    color: #000000;
+  }
+
+  h5 {
+    text-indent: 30px;
+    text-decoration: underline;
+    color: #000000;
+  }
+
+  p {
+    padding-top: 50px;
+    color: #000000;
+    font-size: 18px;
+  }
+
+  ul {
+    padding-top: 50px;
+    color: #000000;
+    font-size: 18px;
+  }
+}
+
+.second-section-home-practicalInfo {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  background-color: transparent;
+  display: block;
+  color: $orange;
+  background-color: $light-gray;
+
+  .second-section-home-practicalInfo-image {
+    width: 60%;
+    margin: auto;
+    text-align: center;
+  }
+
+  .second-section-home-practicalInfo-content {
+    width: 1000px;
+    margin: auto;
+  }
+
+  h1 {
+    font-family: Georgia, serif !important;
+    text-align: center;
+    padding-top: 50px;
+    color: #000000;
+  }
+
+  h5 {
+    text-indent: 30px;
+    text-decoration: underline;
+    color: #000000;
+  }
+
+  p {
+    padding-top: 50px;
+    color: #000000;
+    font-size: 18px;
+  }
+
+  ul {
+    padding-top: 50px;
+    color: #000000;
+    font-size: 18px;
+  }
+}
+
+.second-section-home-ourPartners {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  background-color: transparent;
+  display: block;
+  color: $orange;
+  background-color: $light-gray;
+
+  .second-section-home-ourPartners-image {
+    width: 60%;
+    margin: auto;
+    text-align: center;
+  }
+
+  .second-section-home-ourPartners-content {
+    width: 1000px;
+    margin: auto;
+  }
+
+  h1 {
+    font-family: Georgia, serif !important;
+    text-align: center;
+    padding-top: 50px;
+    color: #000000;
+  }
+
+  h5 {
+    text-indent: 30px;
+    text-decoration: underline;
+    color: #000000;
+  }
+
+  p {
+    padding-top: 50px;
+    color: #000000;
+    font-size: 18px;
+  }
+
+  ul {
+    padding-top: 50px;
+    color: #000000;
+    font-size: 18px;
+  }
+}
+
+.second-section-home-media {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  background-color: transparent;
+  display: block;
+  color: $orange;
+  background-color: $light-gray;
+
+  .second-section-home-media-image {
+    width: 60%;
+    margin: auto;
+    text-align: center;
+  }
+
+  .second-section-home-media-content {
+    width: 1000px;
+    margin: auto;
+  }
+
+  h1 {
+    font-family: Georgia, serif !important;
+    text-align: center;
+    padding-top: 50px;
+    color: #000000;
+  }
+
+  h5 {
+    text-indent: 30px;
+    text-decoration: underline;
+    color: #000000;
+  }
+
+  p {
+    padding-top: 50px;
+    color: #000000;
+    font-size: 18px;
+  }
+
+  ul {
+    padding-top: 50px;
+    color: #000000;
+    font-size: 18px;
+  }
+}
+// Individual page regulation styles
 .section-regulation {
   position: relative;
   width: 100vw;
@@ -58,6 +282,20 @@
   display: block;
   color: $orange;
   background-color: $light-gray;
+  position: relative;
+
+
+  .content-regulation {
+    width: 100%;
+    height: 100%;
+    position: sticky;
+    background-image: url("LogoNeroContinuo1") ; /* Color for the full screen */
+    background-position: center;
+    background-repeat: no-repeat;
+    z-index: 5;
+
+  }
+
   h1 {
     font-family: Georgia, serif !important;
     text-align: center;
@@ -113,51 +351,42 @@
   }
 }
 
-.full-div {
-  width: 100%;
-  height: 100%;
-  position: absolute;
-  top: 0;
-  left: 0;
-  background-color: transparent; /* Color for the full screen */
-  z-index: 5;
-}
 
-.left, .right {
-  width: 50%;
-  height: 100%;
-  position: absolute;
-  top: 0;
-  bottom: 0;
-}
+// .left, .right {
+//   width: 50%;
+//   height: 100%;
+//   position: absolute;
+//   top: 0;
+//   bottom: 0;
+// }
 
-.left {
-  left: 0;
-  background-color: $black; /* Color for the left side */
-  padding: 10px 0px 0px 10px;
-}
+// .left {
+//   left: 0;
+//   background-color: $black; /* Color for the left side */
+//   padding: 10px 0px 0px 10px;
+// }
 
-.right {
-  right: 0;
-  background-color: $black; /* Color for the right side */
-}
+// .right {
+//   right: 0;
+//   background-color: $black; /* Color for the right side */
+// }
 
-.divider {
-  position: absolute;
-  top: 0;
-  left: 0;
-  height: 100vh;
-  width: 100vw;
-  z-index: 1;
-  background-color: transparent;
-}
+// .divider {
+//   position: absolute;
+//   top: 0;
+//   left: 0;
+//   height: 100vh;
+//   width: 100vw;
+//   z-index: 1;
+//   background-color: transparent;
+// }
 
-.divider path {
-  fill: none;
-  stroke: $orange;
-  stroke-width: 0.2;
-}
-.first-section {
-  width: 100vw;
-  height: 100vh;
-}
+// .divider path {
+//   fill: none;
+//   stroke: $orange;
+//   stroke-width: 0.2;
+// }
+// .first-section {
+//   width: 100vw;
+//   height: 100vh;
+// }
